@@ -83,13 +83,13 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 ---
 
-## 🖼 Screenshots (opcional)
+## 🖼 Screenshots
 
 <p align="center">
   <img src="public/screenshots/cards.png" width="500" />
   <img src="public/screenshots/detailCard.png" width="500" />
-  <img src="public/screenshots/profile.png" width="500" />
   <img src="public/screenshots/register.png" width="500" />
+  <img src="public/screenshots/profile.png" width="500" />
 </p>
 
 ---
