@@ -1,40 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# TCG Collections — Coleções de Cartas TCG
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-000?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-61dafb?logo=react)](https://react.dev/)
+[![Typescript](https://img.shields.io/badge/Typescript-3178c6?logo=typescript)](https://www.typescriptlang.org/)
+[![Zustand](https://img.shields.io/badge/Zustand-764ABC?logo=redux)](https://zustand-demo.pmnd.rs/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase)](https://supabase.com/)
 
-First, run the development server:
+Aplicação web para busca e organização de cartas de TCG, com foco inicial em **Yu-Gi-Oh!**.  
+É possível criar uma conta, montar coleções personalizadas e marcar uma coleção favorita para exibição no perfil.
+
+---
+
+## ✨ Features
+
+- 🔍 Busca de cartas de Yu-Gi-Oh!
+- 🃏 Visualização de cartas em formato de grid
+- 📃 Ao clicar na carta, abre um modal/dialog com detalhes completos
+- 👤 Sistema de login e cadastro (Supabase Auth)
+- 📁 Criação de coleções personalizadas
+- ➕ Adicionar cartas diretamente para uma coleção
+- ⭐ Escolher uma coleção favorita no perfil
+- 💾 Persistência de dados via Supabase
+- ⚡ Estado global via Zustand
+- 🎨 UI custom com Styled Components
+- 🧩 Ícones usando Lucide-React
+- 🚀 App em React + Next.js + Typescript
+
+---
+
+## 🧰 Tecnologias
+
+| Área | Tecnologia |
+|---|---|
+| Framework | Next.js + React |
+| Linguagem | Typescript |
+| Estado | Zustand |
+| Backend as a Service | Supabase |
+| Auth | Supabase Auth |
+| DB / Storage | Supabase Database + Buckets |
+| Estilização | Styled Components |
+| Ícones | lucide-react |
+| Deploy | (Vercel / outro) |
+
+---
+
+## 🏗 Arquitetura resumida
+
+- **Zustand**
+  - gerencia dados do usuário, coleções e cartas
+- **Supabase**
+  - persistência das coleções
+  - relação coleção ↔ carta
+  - avatar e imagens via bucket
+  - autenticação
+- **Styled Components**
+  - estilização orientada a componentes
+  - tema reutilizável (opcional)
+- **Lucide-React**
+  - ícones leves e escaláveis
+
+---
+
+## 📦 Como rodar o projeto
 
 ```bash
+git clone https://github.com/seu-user/card-collection.git
+cd card-collection
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🔐 Variáveis de ambiente
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Crie um `.env.local` com:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🖼 Screenshots (opcional)
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  <img src="public/screenshots/cards.png" width="500" />
+  <img src="public/screenshots/detailCard.png" width="500" />
+  <img src="public/screenshots/profile.png" width="500" />
+  <img src="public/screenshots/register.png" width="500" />
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚧 Roadmap
 
-## Deploy on Vercel
+- [ ] Suporte a mais TCGs além de Yu-Gi-Oh!
+- [ ] Filtro avançado de busca
+- [ ] Compartilhar perfil com outros usuários
+- [ ] Dark/Light Mode
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 🤝 Contribuições
+
+Contribuições são bem-vindas!  
+Abra uma Issue ou Pull Request.
+
+---
+
+## 📜 Licença
+
+MIT License — veja o arquivo LICENSE para mais detalhes.
+
+---
+
+## 🙋 Sobre o projeto
+
+Projeto criado para estudo de:
+- Next.js
+- Zustand
+- Supabase
+- Styled Components
+- UX aplicada a TCG
